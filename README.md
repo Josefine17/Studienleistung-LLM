@@ -16,3 +16,5 @@ Verfahrensweise (welche Arbeitsschritte planen Sie?)
 - 
 
 Arbeitsteilung 
+NJ: TMDB - API - Anbindung, Auswertung/Interpretation
+JH: Prompts schreiben, Prompt Analyse
