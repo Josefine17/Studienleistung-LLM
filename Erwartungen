@@ -1,6 +1,3 @@
-
-		○ Spiegelt sich deine gute Bewertung des Films in dem Umsatz, der generiert wurde wieder?
-		○ Gibt es eine besondere Häufung von Genres zu einem bestimmten Release-Datum?
-		○ Gibt es eine Häufung von Umsatz, der zu bestimmten release-Zeiträumen generiert wird? Bsp. Mehr Geld wird eingenommen bei Filmen im Herbst, als im Sommer. 
-		○ Werden Filme, die Pupulärer sind, häufiger gevotet? Dasselbe gilt für Umsatz (mehr Umsatz = mehr gevoted)
-Wie ist die Bewertun in unterschiedlichen Genres?
+Es wird erwartet, dass je höher manche Faktoren sind, andere Faktoren ebenfalls ansteigen, wenn die ursprünglichen Faktoren steigen.
+Das gleiche gilt, wenn die Faktoren sinken
+z.b. die Popularität des Films steigt je häufiger gevotet wird.
