@@ -1,9 +1,10 @@
 # Studienleistung-LLM
 
 Modell: DeepSeek-V3.1
+
 Aufgabenstellung
-- Es soll geschaut werden wie verschiedene Punkte aus dem Datensatz zueinander stehen z.B.
-- Genre Eingrenzung, zeitliche Eingrenzung, Umsatz, Release Date, Bewertung
+- Es soll geschaut werden wie verschiedene Punkte aus dem Datensatz zueinander stehen 
+-   z.B. Genre Eingrenzung, zeitliche Eingrenzung, Umsatz, Release Date, Bewertung
 - Verwendung von TMDB Datensatz aus kaggle (https://www.kaggle.com/datasets/asaniczka/tmdb-movies-dataset-2023-930k-movies, https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata) ODER per API-Schnittstelle
 - Das Projekt soll untersuchen, wie gut das LLM Zusammenhänge erkennt und Fragen beantworten kann, dazu sollen Prognosen abgeleitet und mit den Ergebnissen verglichen werden
 
