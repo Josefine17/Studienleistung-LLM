@@ -1,3 +1,15 @@
+Update:
+
+Sentiment Analyse mit Kaggle Datenset https://www.kaggle.com/datasets/lakshmi25npathi/imdb-dataset-of-50k-movie-reviews
+- Erkennung der Stimmung von IMDB-Rezensionen
+- Beispiel-Prompt: Bewerte die Stimmung dieser Rezension: positiv, neutral oder negativ
+- mit verschiedenen Prompt-Strategien (Zero-Shot vs. Few-Shot mit Beispielen)
+- 
+
+
+
+
+
 # Studienleistung-LLM
 
 Modell: DeepSeek-V3.1
