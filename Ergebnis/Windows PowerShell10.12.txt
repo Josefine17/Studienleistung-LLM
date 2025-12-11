@@ -1,0 +1,378 @@
+Windows PowerShell
+Copyright (C) Microsoft Corporation. Alle Rechte vorbehalten.
+
+Installieren Sie die neueste PowerShell für neue Funktionen und Verbesserungen! https://aka.ms/PSWindows
+
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis> python run_experiments.py
+Traceback (most recent call last):
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 5, in <module>
+    from evaluator import ResultsEvaluator
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\evaluator.py", line 6, in <module>
+    import matplotlib.pyplot as plt
+ModuleNotFoundError: No module named 'matplotlib'
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis> pip install matplotlib seaborn scikit-learn ollama
+Collecting matplotlib
+  Downloading matplotlib-3.10.7-cp311-cp311-win_amd64.whl.metadata (11 kB)
+Collecting seaborn
+  Downloading seaborn-0.13.2-py3-none-any.whl.metadata (5.4 kB)
+Requirement already satisfied: scikit-learn in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (1.7.2)
+Requirement already satisfied: ollama in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (0.6.1)
+Collecting contourpy>=1.0.1 (from matplotlib)
+  Downloading contourpy-1.3.3-cp311-cp311-win_amd64.whl.metadata (5.5 kB)
+Collecting cycler>=0.10 (from matplotlib)
+  Downloading cycler-0.12.1-py3-none-any.whl.metadata (3.8 kB)
+Collecting fonttools>=4.22.0 (from matplotlib)
+  Downloading fonttools-4.61.0-cp311-cp311-win_amd64.whl.metadata (115 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 115.4/115.4 kB 3.4 MB/s eta 0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib)
+  Downloading kiwisolver-1.4.9-cp311-cp311-win_amd64.whl.metadata (6.4 kB)
+Requirement already satisfied: numpy>=1.23 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from matplotlib) (2.3.5)
+Collecting packaging>=20.0 (from matplotlib)
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Collecting pillow>=8 (from matplotlib)
+  Downloading pillow-12.0.0-cp311-cp311-win_amd64.whl.metadata (9.0 kB)
+Collecting pyparsing>=3 (from matplotlib)
+  Downloading pyparsing-3.2.5-py3-none-any.whl.metadata (5.0 kB)
+Requirement already satisfied: python-dateutil>=2.7 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: pandas>=1.2 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from seaborn) (2.3.3)
+Requirement already satisfied: scipy>=1.8.0 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from scikit-learn) (1.16.3)
+Requirement already satisfied: joblib>=1.2.0 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from scikit-learn) (1.5.2)
+Requirement already satisfied: threadpoolctl>=3.1.0 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: httpx>=0.27 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from ollama) (0.28.1)
+Requirement already satisfied: pydantic>=2.9 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from ollama) (2.12.5)
+Requirement already satisfied: anyio in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from httpx>=0.27->ollama) (4.12.0)
+Requirement already satisfied: certifi in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from httpx>=0.27->ollama) (2025.11.12)
+Requirement already satisfied: httpcore==1.* in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from httpx>=0.27->ollama) (1.0.9)
+Requirement already satisfied: idna in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from httpx>=0.27->ollama) (3.11)
+Requirement already satisfied: h11>=0.16 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from httpcore==1.*->httpx>=0.27->ollama) (0.16.0)
+Requirement already satisfied: pytz>=2020.1 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from pandas>=1.2->seaborn) (2025.2)
+Requirement already satisfied: tzdata>=2022.7 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from pandas>=1.2->seaborn) (2025.2)
+Requirement already satisfied: annotated-types>=0.6.0 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from pydantic>=2.9->ollama) (0.7.0)
+Requirement already satisfied: pydantic-core==2.41.5 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from pydantic>=2.9->ollama) (2.41.5)
+Requirement already satisfied: typing-extensions>=4.14.1 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from pydantic>=2.9->ollama) (4.15.0)
+Requirement already satisfied: typing-inspection>=0.4.2 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from pydantic>=2.9->ollama) (0.4.2)
+Requirement already satisfied: six>=1.5 in c:\users\hoefl\appdata\local\packages\pythonsoftwarefoundation.python.3.11_qbz5n2kfra8p0\localcache\local-packages\python311\site-packages (from python-dateutil>=2.7->matplotlib) (1.17.0)
+Downloading matplotlib-3.10.7-cp311-cp311-win_amd64.whl (8.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.1/8.1 MB 11.3 MB/s eta 0:00:00
+Downloading seaborn-0.13.2-py3-none-any.whl (294 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 294.9/294.9 kB 9.2 MB/s eta 0:00:00
+Downloading contourpy-1.3.3-cp311-cp311-win_amd64.whl (225 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 225.2/225.2 kB 13.4 MB/s eta 0:00:00
+Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Downloading fonttools-4.61.0-cp311-cp311-win_amd64.whl (2.3 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.3/2.3 MB 10.6 MB/s eta 0:00:00
+Downloading kiwisolver-1.4.9-cp311-cp311-win_amd64.whl (73 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 73.8/73.8 kB ? eta 0:00:00
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB ? eta 0:00:00
+Downloading pillow-12.0.0-cp311-cp311-win_amd64.whl (7.0 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.0/7.0 MB 11.5 MB/s eta 0:00:00
+Downloading pyparsing-3.2.5-py3-none-any.whl (113 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 113.9/113.9 kB 6.5 MB/s eta 0:00:00
+Installing collected packages: pyparsing, pillow, packaging, kiwisolver, fonttools, cycler, contourpy, matplotlib, seaborn
+  WARNING: The scripts fonttools.exe, pyftmerge.exe, pyftsubset.exe and ttx.exe are installed in 'C:\Users\hoefl\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\Scripts' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed contourpy-1.3.3 cycler-0.12.1 fonttools-4.61.0 kiwisolver-1.4.9 matplotlib-3.10.7 packaging-25.0 pillow-12.0.0 pyparsing-3.2.5 seaborn-0.13.2
+
+[notice] A new release of pip is available: 24.0 -> 25.3
+[notice] To update, run: C:\Users\hoefl\AppData\Local\Microsoft\WindowsApps\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\python.exe -m pip install --upgrade pip
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis> python run_experiments.py
+======================================================================
+               IMDB SENTIMENT ANALYSIS WITH OLLAMA
+======================================================================
+
+[1/3] Lade Daten...
+Daten geladen: 50 Reviews
+
+[2/3] Führe Experimente durch...
+
+======================================================================
+Experiment: llama3.2 - zero_shot
+======================================================================
+Fehler beim Verbinden mit Ollama: 'name'
+
+Stellen Sie sicher, dass Ollama läuft:
+  - Windows/Mac: Ollama sollte im Hintergrund laufen
+  - Linux: Führen Sie 'ollama serve' in einem separaten Terminal aus
+Traceback (most recent call last):
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 87, in <module>
+    main()
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 44, in main
+    experiment = SentimentExperiment(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 27, in __init__
+    self._check_model_available()
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 35, in _check_model_available
+    available_models = [m['name'] for m in models.get('models', [])]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 35, in <listcomp>
+    available_models = [m['name'] for m in models.get('models', [])]
+                        ~^^^^^^^^
+  File "C:\Users\hoefl\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\ollama\_types.py", line 33, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis> python run_experiments.py
+======================================================================
+               IMDB SENTIMENT ANALYSIS WITH OLLAMA
+======================================================================
+
+[1/3] Lade Daten...
+Daten geladen: 50 Reviews
+
+[2/3] Führe Experimente durch...
+
+======================================================================
+Experiment: llama3.2 - zero_shot
+======================================================================
+Fehler beim Verbinden mit Ollama: 'name'
+
+Stellen Sie sicher, dass Ollama läuft:
+  - Windows/Mac: Ollama sollte im Hintergrund laufen
+  - Linux: Führen Sie 'ollama serve' in einem separaten Terminal aus
+Traceback (most recent call last):
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 87, in <module>
+    main()
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 44, in main
+    experiment = SentimentExperiment(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 27, in __init__
+    self._check_model_available()
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 35, in _check_model_available
+    available_models = [m['name'] for m in models.get('models', [])]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 35, in <listcomp>
+    available_models = [m['name'] for m in models.get('models', [])]
+                        ~^^^^^^^^
+  File "C:\Users\hoefl\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\ollama\_types.py", line 33, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis> python run_experiments.py
+======================================================================
+               IMDB SENTIMENT ANALYSIS WITH OLLAMA
+======================================================================
+
+[1/3] Lade Daten...
+Daten geladen: 50 Reviews
+
+[2/3] Führe Experimente durch...
+
+======================================================================
+Experiment: llama3.2 - zero_shot
+======================================================================
+Fehler beim Verbinden mit Ollama: 'name'
+
+Stellen Sie sicher, dass Ollama läuft:
+  - Windows/Mac: Ollama sollte im Hintergrund laufen
+  - Linux: Führen Sie 'ollama serve' in einem separaten Terminal aus
+Traceback (most recent call last):
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 87, in <module>
+    main()
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 44, in main
+    experiment = SentimentExperiment(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 27, in __init__
+    self._check_model_available()
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 35, in _check_model_available
+    available_models = [m ['name'] for m in models.get('models', [])]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 35, in <listcomp>
+    available_models = [m ['name'] for m in models.get('models', [])]
+                        ~~^^^^^^^^
+  File "C:\Users\hoefl\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\ollama\_types.py", line 33, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis> python run_experiments.py
+Traceback (most recent call last):
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 4, in <module>
+    from experiment_runner import SentimentExperiment
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 30
+    """
+    ^
+IndentationError: expected an indented block after function definition on line 29
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis> python run_experiments.py
+======================================================================
+               IMDB SENTIMENT ANALYSIS WITH OLLAMA
+======================================================================
+
+[1/3] Lade Daten...
+Daten geladen: 50 Reviews
+
+[2/3] Führe Experimente durch...
+
+======================================================================
+Experiment: llama3.2 - zero_shot
+======================================================================
+Fehler beim Verbinden mit Ollama: 'name'
+
+Stellen Sie sicher, dass Ollama läuft:
+  - Windows/Mac: Ollama sollte im Hintergrund laufen
+  - Linux: Führen Sie 'ollama serve' in einem separaten Terminal aus
+Traceback (most recent call last):
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 87, in <module>
+    main()
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\run_experiments.py", line 44, in main
+    experiment = SentimentExperiment(
+                 ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 28, in __init__
+    self._check_model_available()
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 37, in _check_model_available
+    available_models = [m ['name'] for m in models.get('models', [])]
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis\experiment_runner.py", line 37, in <listcomp>
+    available_models = [m ['name'] for m in models.get('models', [])]
+                        ~~^^^^^^^^
+  File "C:\Users\hoefl\AppData\Local\Packages\PythonSoftwareFoundation.Python.3.11_qbz5n2kfra8p0\LocalCache\local-packages\Python311\site-packages\ollama\_types.py", line 33, in __getitem__
+    raise KeyError(key)
+KeyError: 'name'
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis> python run_experiments.py
+======================================================================
+               IMDB SENTIMENT ANALYSIS WITH OLLAMA
+======================================================================
+
+[1/3] Lade Daten...
+Daten geladen: 50 Reviews
+
+[2/3] Führe Experimente durch...
+
+======================================================================
+Experiment: llama3.2 - zero_shot
+======================================================================
+🔍 Prüfe Verfügbarkeit von Modell 'llama3.2'...
+⚠️  Modell 'llama3.2' nicht in der Liste!
+📦 Verfügbare Modelle:
+
+💡 Falls das Modell nicht installiert ist:
+   ollama pull llama3.2
+
+⚠️  Versuche trotzdem fortzufahren...
+
+======================================================================
+🚀 Starte Experiment
+======================================================================
+Modell: llama3.2
+Prompt-Typ: zero_shot
+Anzahl Samples: 50
+======================================================================
+
+Progress: 50/50 (100.0%) - Verarbeite Review...
+
+======================================================================
+✅ Experiment abgeschlossen!
+⏱️  Dauer: 1057.2 Sekunden (17.6 Minuten)
+⚡ Durchschnitt: 21.14 Sekunden pro Review
+======================================================================
+
+💾 Ergebnisse gespeichert: results/sentiment_llama3.2_zero_shot_20251210_233225.csv
+
+======================================================================
+Experiment: llama3.2 - few_shot
+======================================================================
+🔍 Prüfe Verfügbarkeit von Modell 'llama3.2'...
+⚠️  Modell 'llama3.2' nicht in der Liste!
+📦 Verfügbare Modelle:
+
+💡 Falls das Modell nicht installiert ist:
+   ollama pull llama3.2
+
+⚠️  Versuche trotzdem fortzufahren...
+
+======================================================================
+🚀 Starte Experiment
+======================================================================
+Modell: llama3.2
+Prompt-Typ: few_shot
+Anzahl Samples: 50
+======================================================================
+
+Progress: 50/50 (100.0%) - Verarbeite Review...
+
+======================================================================
+✅ Experiment abgeschlossen!
+⏱️  Dauer: 1264.2 Sekunden (21.1 Minuten)
+⚡ Durchschnitt: 25.28 Sekunden pro Review
+======================================================================
+
+💾 Ergebnisse gespeichert: results/sentiment_llama3.2_few_shot_20251210_235330.csv
+
+[3/3] Evaluiere Ergebnisse...
+
+======================================================================
+                         EVALUATION RESULTS
+======================================================================
+
+ Modell: llama3.2
+Prompt-Typ: zero_shot
+
+ Samples:
+   Total: 50
+   Valid: 50
+   Invalid: 0
+
+ Performance:
+   Accuracy:  98.00%
+   Precision: 98.08%
+   Recall:    98.00%
+   F1-Score:  98.00%
+
+ Fehler: 1/50
+
+ Beispiele für Fehler:
+
+   Review: The theme is controversial and the depiction of the hypocritical and sexually starved india is excellent.Nothing more to this film.There is a lack of ...
+   Erwartet: positive | Vorhergesagt: negative
+
+======================================================================
+Confusion Matrix gespeichert: figures/cm_llama3.2_zero_shot.png
+
+======================================================================
+                         EVALUATION RESULTS
+======================================================================
+
+ Modell: llama3.2
+Prompt-Typ: few_shot
+
+ Samples:
+   Total: 50
+   Valid: 50
+   Invalid: 0
+
+ Performance:
+   Accuracy:  92.00%
+   Precision: 93.10%
+   Recall:    92.00%
+   F1-Score:  91.95%
+
+ Fehler: 4/50
+
+ Beispiele für Fehler:
+
+   Review: Bugs Bunny accidentally ends up at the South Pole while trying to vacation in Florida. Where he meets a little penquin, which he tries to save from an...
+   Erwartet: negative | Vorhergesagt: positive
+
+   Review: It wasn't until I saw Sidney Pollack in the picture that I ever connected him to this film. This is his worst possible movie. Absolute dreck. The dial...
+   Erwartet: negative | Vorhergesagt: positive
+
+   Review: The movie began well enough. It had a fellow get hit by a glowing green meteorite, getting superpowers (telekinesis, x-ray vision, invulnerability, fl...
+   Erwartet: negative | Vorhergesagt: positive
+
+======================================================================
+Confusion Matrix gespeichert: figures/cm_llama3.2_few_shot.png
+
+======================================================================
+                    GESAMTVERGLEICH
+======================================================================
+
+   model prompt_type  accuracy  f1_score
+llama3.2   zero_shot      0.98  0.979992
+llama3.2    few_shot      0.92  0.919485
+
+Vergleich gespeichert: results/comparison_summary.csv
+
+======================================================================
+                         FERTIG!
+======================================================================
+
+Ergebnisse verfügbar in:
+  results/     (CSV-Dateien)
+  figures/     (Visualisierungen)
+PS C:\Users\hoefl\OneDrive\Documents\uni\Master\1. Semester\5 Open LLM\Studienleistungen 2\imdb-sentiment-analysis>
