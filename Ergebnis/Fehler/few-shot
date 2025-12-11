@@ -10,7 +10,8 @@ Prompt-Typ: few_shot
    Accuracy:  92.00%
    Precision: 93.10%
    Recall:    92.00%
-   F1-Score:  91.95%Fehler: 4/50
+   F1-Score:  91.95%
+   Fehler: 4/50
 
  Beispiele für Fehler:
 
