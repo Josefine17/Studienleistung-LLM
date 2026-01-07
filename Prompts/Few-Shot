@@ -1,1 +1,15 @@
+Analysiere die Stimmung von Rezensionen.
 
+Beispiele:
+Rezension: "Großartiger Film! Hat mich sehr bewegt."
+Stimmung: positiv
+
+Rezension: "Totale Zeitverschwendung, langweilig."
+Stimmung: negativ
+
+Rezension: "Der Film war okay, nichts Besonderes."
+Stimmung: neutral
+
+Nun analysiere diese Rezension:
+Rezension: "{review_text}"
+Stimmung:
